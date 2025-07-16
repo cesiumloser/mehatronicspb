@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Мехатроника-СПб | Ремонт промышленной электроники</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Mobile-first стили */
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+        }
+        
+        .service-card, .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        /* Улучшенные стили для мобильных */
+        @media (max-width: 767px) {
+            /* Упрощенный хедер */
+            .top-contact-bar {
+                flex-direction: column;
+                text-align: center;
+                padding: 8px;
+            }
+            
+            .top-contact-bar a {
+                margin: 4px 0;
+                font-size: 14px;
+            }
+            
+            /* Логотип и название в шапке */
+            .main-header .logo-title {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .main-header h1 {
+                font-size: 18px;
+            }
+            
+            .main-header p {
+                font-size: 12px;
+            }
+            
+            /* Герой-секция */
+            .hero-section h1 {
+                font-size: 24px;
+                line-height: 1.3;
+                margin-bottom: 16px;
+            }
+            
+            .hero-section p {
+                font-size: 16px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .hero-buttons a {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            
+            /* Услуги и преимущества */
+            .service-card, .advantage-card {
+                margin-bottom: 16px;
+            }
+            
+            /* Контактная форма */
+            .contact-form-section {
+                padding: 0;
+            }
+            
+            .contact-form-wrapper {
+                flex-direction: column;
+            }
+            
+            .contact-info, .form-container {
+                width: 100% !important;
+            }
+            
+            /* Футер */
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            /* Общие улучшения */
+            .section-padding {
+                padding: 40px 16px;
+            }
+            
+            h2 {
+                font-size: 24px;
+                margin-bottom: 24px;
+            }
+        }
+        
+        /* Анимации */
+        .button-style {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white !important;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(37, 117, 252, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .button-style:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(37, 117, 252, 0.5);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Top Contact Bar - упрощен для мобильных -->
+    <div class="bg-blue-900 text-white py-2 px-4 top-contact-bar">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex flex-col md:flex-row md:space-x-4 space-y-1 md:space-y-0 mb-2 md:mb-0">
+                <a href="tel:+79944245453" class="flex items-center justify-center hover:text-blue-200 text-sm">
+                    <i class="fas fa-mobile-alt mr-2"></i> +7 (994) 424-54-53
+                </a>
+                <a href="tel:+78129801385" class="flex items-center justify-center hover:text-blue-200 text-sm">
+                    <i class="fas fa-phone-alt mr-2"></i> +7 (812) 980-13-85
+                </a>
+            </div>
+            <div class="flex items-center justify-center">
+                <a href="mailto:mehatronic-spb@yandex.ru" class="flex items-center hover:text-blue-200 text-sm">
+                    <i class="fas fa-envelope mr-2"></i> mehatronic-spb@yandex.ru
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header - оптимизирован для мобильных -->
+    <header class="bg-white shadow-md sticky top-0 z-50 main-header">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center logo-title">
+                <a href="Main" target="_blank" class="w-12 h-12 mr-2 md:mr-3 block">
+                    <img src="db/mediafile/logo-1-1.png" alt="Логотип Мехатроника-СПб" class="w-full h-full object-contain">
+                </a>
+                <div>
+                    <h1 class="text-lg md:text-2xl font-bold text-gray-800">Мехатроника-СПб</h1>
+                    <p class="text-xs md:text-sm text-gray-600">Ремонт пром. электроники</p>
+                </div>
+            </div>
+            
+            <!-- Десктопное меню -->
+            <nav class="hidden md:flex items-center space-x-4 lg:space-x-6">
+                <a href="Main" class="text-gray-700 hover:text-blue-600 font-medium px-2 py-1 text-sm md:px-3 md:py-2 transition">Главная</a>
+                <a href="Service" class="text-gray-700 hover:text-blue-600 font-medium px-2 py-1 text-sm md:px-3 md:py-2 transition">Услуги</a>
+                <a href="Reviews" class="text-gray-700 hover:text-blue-600 font-medium px-2 py-1 text-sm md:px-3 md:py-2 transition">Отзывы</a>
+                <a href="about.html" class="text-gray-700 hover:text-blue-600 font-medium px-2 py-1 text-sm md:px-3 md:py-2 transition">О компании</a>
+                <a href="Contact" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 md:px-5 md:py-2 rounded-lg font-medium transition text-sm md:text-base">
+                    Контакты
+                </a>
+            </nav>
+            
+            <!-- Мобильное меню -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-3 px-4 shadow-lg">
+            <div class="space-y-2">
+                <a href="Main" class="block py-2 px-3 text-gray-700 hover:bg-blue-50 rounded transition">Главная</a>
+                <a href="Service" class="block py-2 px-3 text-gray-700 hover:bg-blue-50 rounded transition">Услуги</a>
+                <a href="Reviews" class="block py-2 px-3 text-gray-700 hover:bg-blue-50 rounded transition">Отзывы</a>
+                <a href="about.html" class="block py-2 px-3 text-gray-700 hover:bg-blue-50 rounded transition">О компании</a>
+                <a href="Contact" class="block py-2 px-3 bg-blue-600 text-white rounded font-medium text-center">Контакты</a>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-100">
+                <a href="tel:+79944245453" class="flex items-center py-2 px-3 contact-badge">
+                    <i class="fas fa-mobile-alt mr-3 text-blue-600"></i>
+                    <span class="text-sm">+7 (994) 424-54-53</span>
+                </a>
+                <a href="tel:+78129801385" class="flex items-center py-2 px-3 contact-badge">
+                    <i class="fas fa-phone-alt mr-3 text-blue-600"></i>
+                    <span class="text-sm">+7 (812) 980-13-85</span>
+                </a>
+                <a href="mailto:mehatronic-spb@yandex.ru" class="flex items-center py-2 px-3 contact-badge">
+                    <i class="fas fa-envelope mr-3 text-blue-600"></i>
+                    <span class="text-sm">mehatronic-spb@yandex.ru</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section - переработана для мобильных -->
+    <section class="hero-gradient text-white py-12 md:py-20 hero-section">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0 order-2 md:order-1">
+                <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">Ремонт промышленной электроники и блоков спецтехники</h1>
+                <p class="text-base md:text-xl mb-6 md:mb-8">Профессиональный ремонт с гарантией качества и минимальными сроками.</p>
+                <div class="flex flex-col space-y-3 sm:space-y-0 sm:flex-row sm:space-x-4 hero-buttons">
+                    <a href="Contact" class="bg-white text-blue-600 hover:bg-gray-100 px-4 py-2 md:px-6 md:py-3 rounded-lg font-bold text-center transition duration-300 text-sm md:text-base">
+                        Оставить заявку
+                    </a>
+                    <a href="tel:+78129801385" class="border-2 border-white hover:bg-white hover:text-blue-600 px-4 py-2 md:px-6 md:py-3 rounded-lg font-bold text-center transition duration-300 text-sm md:text-base">
+                        <i class="fas fa-phone mr-2"></i> +7 (812) 980-13-85
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Изображение героя -->
+            <div class="md:w-1/2 flex justify-center order-1 md:order-2 mb-8 md:mb-0">
+                <div class="relative w-full max-w-md">
+                    <img src="db\mediafile\67.jpg" alt="Ремонт электроники" class="rounded-lg shadow-xl border-4 border-white object-cover w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-12 md:py-16 bg-white section-padding">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                <!-- Упрощенные карточки для мобильных -->
+                <div class="bg-gray-50 p-4 md:p-6 rounded-lg shadow-sm border border-gray-100 flex items-start advantage-card">
+                    <div class="bg-blue-100 p-2 md:p-3 rounded-full mr-3 md:mr-4">
+                        <i class="fas fa-clock text-blue-600 text-lg md:text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold mb-1 md:mb-2 text-gray-800">Минимальные сроки</h3>
+                        <p class="text-sm md:text-base text-gray-600">Быстрое устранение неисправностей.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-4 md:p-6 rounded-lg shadow-sm border border-gray-100 flex items-start advantage-card">
+                    <div class="bg-blue-100 p-2 md:p-3 rounded-full mr-3 md:mr-4">
+                        <i class="fas fa-shield-alt text-blue-600 text-lg md:text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold mb-1 md:mb-2 text-gray-800">Гарантия</h3>
+                        <p class="text-sm md:text-base text-gray-600">Гарантия на все работы.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-4 md:p-6 rounded-lg shadow-sm border border-gray-100 flex items-start advantage-card">
+                    <div class="bg-blue-100 p-2 md:p-3 rounded-full mr-3 md:mr-4">
+                        <i class="fas fa-tools text-blue-600 text-lg md:text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold mb-1 md:mb-2 text-gray-800">Оборудование</h3>
+                        <p class="text-sm md:text-base text-gray-600">Современное диагностическое оборудование.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-12 md:py-16 bg-gray-50 section-padding">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-gray-800">Наши услуги</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 - упрощен для мобильных -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card">
+                    <div class="h-40 md:h-48 bg-blue-600 flex items-center justify-center">
+                        <i class="fas fa-microchip text-white text-4xl md:text-6xl"></i>
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3 text-gray-800">Ремонт пром. оборудования</h3>
+                        <p class="text-sm md:text-base text-gray-600 mb-3 md:mb-4">Произведем восстановление:</p>
+                        <ul class="list-disc pl-4 space-y-1 text-sm md:text-base text-gray-600">
+                            <li>Программируемых контроллеров (ПЛК)</li>
+                            <li>Модулей ввода-вывода</li>
+                            <li>Панелей управления (HMI)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card">
+                    <div class="h-40 md:h-48 bg-blue-600 flex items-center justify-center">
+                        <i class="fas fa-truck text-white text-4xl md:text-6xl"></i>
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3 text-gray-800">Ремонт блоков спецтехники</h3>
+                        <p class="text-sm md:text-base text-gray-600 mb-3 md:mb-4">Восстановление электроники:</p>
+                        <ul class="list-disc pl-4 space-y-1 text-sm md:text-base text-gray-600">
+                            <li>Тракторы и грузовики</li>
+                            <li>Экскаваторы</li>
+                            <li>Бетононасосы</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card">
+                    <div class="h-40 md:h-48 bg-blue-600 flex items-center justify-center">
+                        <i class="fas fa-oil-can text-white text-4xl md:text-6xl"></i>
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3 text-gray-800">Ремонт актуаторов Danfoss</h3>
+                        <p class="text-sm md:text-base text-gray-600 mb-3 md:mb-4">Ремонт гидравлических актуаторов:</p>
+                        <ul class="list-disc pl-4 space-y-1 text-sm md:text-base text-gray-600">
+                            <li>Модуляторов и блоков</li>
+                            <li>Пропорциональных клапанов</li>
+                            <li>PVEM, PVEA, PVEH</li>
+                        </ul>
+                        <p class="mt-3 text-sm md:text-base text-gray-600">Гарантия на все работы.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="advantages" class="py-12 md:py-16 bg-white section-padding">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-gray-800">Наши преимущества</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                <!-- Advantage 1 -->
+                <div class="bg-gray-50 p-4 md:p-6 rounded-xl shadow-sm border border-gray-100 advantage-card">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-user-graduate text-blue-600 text-lg md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-2 text-center text-gray-800">Высокая квалификация</h3>
+                    <p class="text-sm md:text-base text-gray-600 text-center">Профессионалы с большим опытом ремонта сложной электроники.</p>
+                </div>
+                
+                <!-- Advantage 2 -->
+                <div class="bg-gray-50 p-4 md:p-6 rounded-xl shadow-sm border border-gray-100 advantage-card">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-search text-blue-600 text-lg md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-2 text-center text-gray-800">Точная диагностика</h3>
+                    <p class="text-sm md:text-base text-gray-600 text-center">Современное оборудование для точной диагностики.</p>
+                </div>
+                
+                <!-- Advantage 3 -->
+                <div class="bg-gray-50 p-4 md:p-6 rounded-xl shadow-sm border border-gray-100 advantage-card">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-medal text-blue-600 text-lg md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold mb-2 text-center text-gray-800">Гарантия качества</h3>
+                    <p class="text-sm md:text-base text-gray-600 text-center">Надежное устранение проблем с гарантией.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-12 md:py-16 bg-gray-50 section-padding">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-gray-800">Отзывы клиентов</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Review 1 - упрощен -->
+                <div class="bg-white p-4 md:p-6 rounded-xl shadow-md testimonial-card">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center mr-3 overflow-hidden">
+                            <img src="db\mediafile\logo-1-1.png" alt="Хазраил" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-sm md:text-base">Хазраил</h4>
+                            <p class="text-xs md:text-sm text-gray-500">24 декабря 2024</p>
+                        </div>
+                    </div>
+                    <div class="text-sm md:text-base text-gray-700 mb-3">
+                        Ребята сотворили чудо - после 5-ти лет простоя вышивальная машина заработала. Действительно, у Вас не мастерская, а лаборатория...
+                    </div>
+                    <div class="flex justify-end">
+                        <i class="fas fa-quote-right text-blue-200 text-xl"></i>
+                    </div>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="bg-white p-4 md:p-6 rounded-xl shadow-md testimonial-card">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center mr-3 overflow-hidden">
+                            <img src="db\mediafile\logo-1-1.png" alt="dr.kirramary" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-sm md:text-base">dr.kirramary</h4>
+                            <p class="text-xs md:text-sm text-gray-500">8 октября 2024</p>
+                        </div>
+                    </div>
+                    <div class="text-sm md:text-base text-gray-700 mb-3">
+                        Ребята просто супер-профессионалы, очень быстро и качественно решили вопрос с оборудованием, с которым другие не справились.
+                    </div>
+                    <div class="flex justify-end">
+                        <i class="fas fa-quote-right text-blue-200 text-xl"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="Reviews" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 md:px-6 md:py-3 rounded-lg font-bold transition duration-300 text-sm md:text-base">
+                    Показать больше отзывов
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section - адаптирована для мобильных -->
+    <section id="contact" class="py-12 md:py-16 bg-white section-padding contact-form-section">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-gray-50 rounded-xl shadow-md overflow-hidden">
+                <div class="flex flex-col md:flex-row contact-form-wrapper">
+                    <div class="w-full md:w-1/2 bg-blue-600 p-6 md:p-8 text-white">
+                        <h2 class="text-xl md:text-2xl font-bold mb-4 md:mb-6">Оставьте заявку на ремонт</h2>
+                        <p class="mb-4 md:mb-6 text-sm md:text-base">Оставьте контактные данные и мы свяжемся с вами!</p>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-alt mr-3 text-sm md:text-base"></i>
+                                <span class="text-sm md:text-base">+7 (812) 980-13-85</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope mr-3 text-sm md:text-base"></i>
+                                <span class="text-sm md:text-base">mehatronic-spb@yandex.ru</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 p-6 md:p-8 form-container">
+                        <form>
+                            <div class="mb-3 md:mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-1 text-sm md:text-base">Ваше имя</label>
+                                <input type="text" id="name" class="w-full px-3 py-2 md:px-4 md:py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base">
+                            </div>
+                            <div class="mb-3 md:mb-4">
+                                <label for="phone" class="block text-gray-700 font-medium mb-1 text-sm md:text-base">Телефон</label>
+                                <input type="tel" id="phone" class="w-full px-3 py-2 md:px-4 md:py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base">
+                            </div>
+                            <div class="mb-4 md:mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-1 text-sm md:text-base">Опишите проблему</label>
+                                <textarea id="message" rows="3" class="w-full px-3 py-2 md:px-4 md:py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 md:py-3 rounded-lg font-bold transition duration-300 text-sm md:text-base">
+                                Отправить заявку
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - упрощен для мобильных -->
+    <footer class="bg-gray-800 text-white py-8 md:py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 footer-grid">
+                <div>
+                    <h3 class="text-lg md:text-xl font-bold mb-3 md:mb-4">Мехатроника-СПб</h3>
+                    <p class="text-gray-400 text-sm md:text-base">Скорая помощь для вашего оборудования.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-3 text-sm md:text-base">Услуги</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm md:text-base">Ремонт ПЛК</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm md:text-base">Ремонт HMI панелей</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm md:text-base">Ремонт спецтехники</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-3 text-sm md:text-base">Контакты</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm md:text-base">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-2 mt-1"></i> 
+                            <span>Санкт-Петербург, М. Пл. Восстания, ул. 3-я Советская 9, офис 41</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i> +7 (812) 980-13-85
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-3 text-sm md:text-base">Режим работы</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm md:text-base">
+                        <li>Пн-Пт: 9:00 - 18:00</li>
+                        <li>Сб: 10:00 - 15:00</li>
+                        <li>Вс: выходной</li>
+                    </ul>
+                    <div class="mt-4 flex space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-vk text-lg"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-telegram text-lg"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-whatsapp text-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-gray-400 text-sm md:text-base">
+                <p>&copy; 2025. Мехатроника-СПб. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-blue-600 text-white w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg flex items-center justify-center hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мехатроника-СПб | Ремонт промышленной электроники</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+        }
+        .service-card, .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover, .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .contact-badge {
+            transition: all 0.3s ease;
+            border-left: 3px solid #2563eb;
+        }
+        .contact-badge:hover {
+            background-color: #f0f7ff;
+            transform: translateX(5px);
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+    </style>
+</head>
+    <!-- Main Header -->
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мехатроника-СПб | Ремонт промышленной электроники</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Top Contact Bar -->
+    <div class="bg-blue-900 text-white py-2 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-4 mb-2 md:mb-0">
+                <a href="tel:+79944245453" class="flex items-center hover:text-blue-200">
+                    <i class="fas fa-mobile-alt mr-2"></i> +7 (994) 424-54-53
+                </a>
+                <a href="tel:+78129801385" class="flex items-center hover:text-blue-200">
+                    <i class="fas fa-phone-alt mr-2"></i> +7 (812) 980-13-85
+                </a>
+            </div>
+            <div class="flex items-center">
+                <a href="mailto:mehatronic-spb@yandex.ru" class="flex items-center hover:text-blue-200">
+                    <i class="fas fa-envelope mr-2"></i> mehatronic-spb@yandex.ru
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href=" /" class="w-16 h-16 mr-3 block"> 
+                    <img src="db/mediafile/logo-1-1.png" alt="Логотип Мехатроника-СПб" class="w-full h-full object-contain">
+                </a>
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-800">Мехатроника-СПб</h1>
+                    <p class="text-sm text-gray-600">Ремонт промышленной электроники</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href=" /" class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 transition">Главная</a>
+                <a href="/services" class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 transition">Услуги</a>
+                <a href="/reviews" class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 transition">Отзывы</a>
+                <a href="/about" class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 transition">О компании</a>
+                <a href="/contact" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-medium transition">
+                    Контакты
+                </a>
+            </nav>
+            
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-3 px-4 shadow-lg">
+            <div class="space-y-2">
+                <a href="/mecha.local" class="block py-2 px-3 text-gray-700 hover:bg-blue-50 rounded transition">Главная</a>
+                <a href="/services" class="block py-2 px-3 text-gray-700 hover:bg-blue-50 rounded transition">Услуги</a>
+                <a href="/reviews" class="block py-2 px-3 text-gray-700 hover:bg-blue-50 rounded transition">Отзывы</a>
+                <a href="/about" class="block py-2 px-3 text-gray-700 hover:bg-blue-50 rounded transition">О компании</a>
+                <a href="/contact" class="block py-2 px-3 bg-blue-600 text-white rounded font-medium">Контакты</a>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-100">
+                <a href="tel:+79944245453" class="flex items-center py-2 px-3 contact-badge">
+                    <i class="fas fa-mobile-alt mr-3 text-blue-600"></i>
+                    <span>+7 (994) 424-54-53</span>
+                </a>
+                <a href="tel:+78129801385" class="flex items-center py-2 px-3 contact-badge">
+                    <i class="fas fa-phone-alt mr-3 text-blue-600"></i>
+                    <span>+7 (812) 980-13-85</span>
+                </a>
+                <a href="mailto:mehatronic-spb@yandex.ru" class="flex items-center py-2 px-3 contact-badge">
+                    <i class="fas fa-envelope mr-3 text-blue-600"></i>
+                    <span>mehatronic-spb@yandex.ru</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- Services Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Наши услуги</h1>
+            <p class="text-xl max-w-3xl mx-auto">Профессиональный ремонт промышленной электроники с гарантией качества и минимальными сроками</p>
+        </div>
+    </section>
+
+    <!-- Main Services Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- Service 1 -->
+            <div class="mb-20">
+                <div class="flex flex-col md:flex-row items-center mb-8">
+                    <div class="md:w-1/3 mb-6 md:mb-0">
+                        <div class="bg-blue-100 p-8 rounded-lg flex items-center justify-center h-64">
+                            <i class="fas fa-microchip text-blue-600 text-6xl"></i>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 md:pl-10">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">1. Ремонт электроники промышленного оборудования</h2>
+                        <p class="text-gray-600 mb-6">Восстановление работоспособности электронного оборудования Вашего предприятия. Ремонт электронных плат и блоков на компонентном уровне. В настоящий момент компонентный ремонт - наиболее выгодный подход к восстановлению работоспособности дорогостоящего промышленного оборудования. Опыт работы наших инженеров более 15 лет.</p>
+                        <p class="text-gray-600 mb-6 font-semibold">Выполним ремонт электроники промышленного оборудования любой сложности. Выезд в пределах СПб по согласованию.</p>
+                        
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Произведем восстановление:</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                <li>Программируемых логических контроллеров (ПЛК, PLC)</li>
+                                <li>Модулей аналогового и дискретного вывода-вывода</li>
+                                <li>Панелей управления оператора (HMI)</li>
+                                <li>Систем ЧПУ CNC различных станков</li>
+                                <li>Промышленных роботов</li>
+                                <li>Частотных преобразователей</li>
+                                <li>Сервоусилителей</li>
+                                <li>Сервомоторов</li>
+                                <li>Устройств плавного пуска</li>
+                                <li>Драйверов шаговых двигателей</li>
+                            </ul>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                <li>Абсолютных и инкрементных энкодеров</li>
+                                <li>Резольверов</li>
+                                <li>Приводов постоянного тока BLDC, PMSM</li>
+                                <li>Коллекторных моторов</li>
+                                <li>Автоматизированных систем управления</li>
+                                <li>Промышленных компьютеров</li>
+                                <li>Промышленных мониторов</li>
+                                <li>Аппаратов ультразвуковой сварки</li>
+                                <li>Электродуговых сварочных аппаратов</li>
+                                <li>Плазморезов</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-8 bg-blue-50 p-4 rounded-lg">
+                            <p class="font-semibold text-blue-800">На все выполненные работы предоставляются гарантийные обязательства.</p>
+                            <p class="text-blue-700 mt-2">Важно: Сотрудничаем только с юридическими лицами.</p>
+                        </div>
+                    </div>
+                </div>
+                
+        
+            
+            <!-- Service 2 -->
+            <div class="mb-20">
+                <div class="flex flex-col md:flex-row items-center mb-8">
+                    <div class="md:w-1/3 mb-6 md:mb-0">
+                        <div class="bg-blue-100 p-8 rounded-lg flex items-center justify-center h-64">
+                            <i class="fas fa-oil-can text-blue-600 text-6xl"></i>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 md:pl-10">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">2. Ремонт электромагнитных клапанов Danfoss</h2>
+                        <p class="text-gray-600 mb-6">Произведем восстановление работоспособности клапанов (актуаторов, соленоидов, модуляторов, блок-катушек, блоков электроуправления, пропорциональных клапанов) Danfoss (Данфосс) серии 157B для автовышек, погрузчиков и другой техники.</p>
+                        <p class="text-gray-600 mb-6 font-semibold">Возможность ремонта уточняйте в сообщениях (информация по номеру клапана и неисправности машины) или по телефону. Предоставляются гарантийные обязательства 120-180 дн. в зависимости от сроков эксплуатации и состояния блока.</p>
+                        
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Работаем с моделями:</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                            <p class="text-gray-600">PVEM</p>
+                            <p class="text-gray-600">PVEA</p>
+                            <p class="text-gray-600">PVEH</p>
+                            <p class="text-gray-600">PVES</p>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Примеры ремонтируемых моделей:</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                            <p class="text-gray-600">157B4216</p>
+                            <p class="text-gray-600">157B4901</p>
+                            <p class="text-gray-600">157B4228</p>
+                            <p class="text-gray-600">157B4902</p>
+                            <p class="text-gray-600">157B4292</p>
+                            <p class="text-gray-600">157B4217</p>
+                            <p class="text-gray-600">157B4903</p>
+                            <p class="text-gray-600">157B4229</p>
+                            <p class="text-gray-600">157B4904</p>
+                            <p class="text-gray-600">157B4116</p>
+                            <p class="text-gray-600">157B4128</p>
+                            <p class="text-gray-600">157B4416</p>
+                            <p class="text-gray-600">157B4428</p>
+                            <p class="text-gray-600">157B4734</p>
+                            <p class="text-gray-600">157B4735</p>
+                            <p class="text-gray-600">157B4792</p>
+                            <p class="text-gray-600">157B4736</p>
+                            <p class="text-gray-600">157B4737</p>
+                            <p class="text-gray-600">157B4796</p>
+                            <p class="text-gray-600">157B4032</p>
+                            <p class="text-gray-600">157B4033</p>
+                            <p class="text-gray-600">157B4034</p>
+                            <p class="text-gray-600">157B4035</p>
+                            <p class="text-gray-600">157B4092</p>
+                            <p class="text-gray-600">157B4093</p>
+                            <p class="text-gray-600">157B4332</p>
+                            <p class="text-gray-600">157B4338</p>
+                            <p class="text-gray-600">157B4392</p>
+                            <p class="text-gray-600">157B4036</p>
+                            <p class="text-gray-600">157B4037</p>
+                            <p class="text-gray-600">157B4096</p>
+                            <p class="text-gray-600">157B4832</p>
+                            <p class="text-gray-600">157B4833</p>
+                            <p class="text-gray-600">157B4834</p>
+                            <p class="text-gray-600">157B4835</p>
+                            <p class="text-gray-600">157B4892</p>
+                        </div>
+                        
+                        <div class="mt-8 bg-blue-50 p-4 rounded-lg">
+                            <p class="font-semibold text-blue-800">Работаем с физическими и юридическими лицами. Принимаем заказы со всех регионов.</p>
+                            <p class="text-blue-700 mt-2">Оплата только при наличии положительного результата.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 3 -->
+            <div class="mb-20">
+                <div class="flex flex-col md:flex-row items-center mb-8">
+                    <div class="md:w-1/3 mb-6 md:mb-0">
+                        <div class="bg-blue-100 p-8 rounded-lg flex items-center justify-center h-64">
+                            <i class="fas fa-truck text-blue-600 text-6xl"></i>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 md:pl-10">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">3. Ремонт электронных блоков спецтехники</h2>
+                        <p class="text-gray-600 mb-6">Ремонт электроники дорожно-строительной, складской, уборочной, сельскохозяйственной и другой техники. Произведем ремонт электроники (электронные блоки, электронные платы) всех видов спецтехники: погрузчик, экскаватор, трактор, асфальтоукладчик, бульдозер, грузовик, комбайн, подъёмник, бетононасос, каток, манипулятор и др.</p>
+                        <p class="text-gray-600 mb-6 font-semibold">Восстановление ЭБУ после воздействия повышенного напряжения, переполюсовки, перегрева, залития и других факторов. На все выполненные работы предоставляются гарантийные обязательства от 60 дн.</p>
+                        
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Выполняем:</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                <li>Ремонт пультов, панелей управления машиниста</li>
+                                <li>Ремонт джойстиков, манипуляторов, мониторов</li>
+                                <li>Ремонт приборных панелей (панели приборов)</li>
+                                <li>Восстановление (замена) клавиатуры пультов управления</li>
+                                <li>Ремонт ЭБУ двигателя и коробки передач</li>
+                                <li>Ремонт электроники тормозной системы</li>
+                                <li>Ремонт блоков управления гидравликой спецтехники</li>
+                            </ul>
+                            <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                                <li>Ремонт блоков управления грузовиков</li>
+                                <li>Ремонт контроллеров</li>
+                                <li>Ремонт блоков управления, плат управления</li>
+                                <li>Ремонт контроллеров движения</li>
+                                <li>Ремонт датчиков системы нивелирования</li>
+                                <li>Ремонт блоков управления дизель генераторов</li>
+                                <li>Ремонт блоков управления компрессоров</li>
+                            </ul>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Ремонтируем электронику техники производителей:</h3>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="columns-1 sm:columns-2 md:columns-3 gap-4">
+                                <p class="text-gray-600 mb-2">Vögele</p>
+                                <p class="text-gray-600 mb-2">CB</p>
+                                <p class="text-gray-600 mb-2">Bobcat</p>
+                                <p class="text-gray-600 mb-2">Volvo</p>
+                                <p class="text-gray-600 mb-2">Caterpillar (CAT)</p>
+                                <p class="text-gray-600 mb-2">Dynapac</p>
+                                <p class="text-gray-600 mb-2">Daewoo</p>
+                                <p class="text-gray-600 mb-2">John-Deere</p>
+                                <p class="text-gray-600 mb-2">Mitsubishi</p>
+                                <p class="text-gray-600 mb-2">Mercedes Actros</p>
+                                <p class="text-gray-600 mb-2">New Holland</p>
+                                <p class="text-gray-600 mb-2">Case</p>
+                                <p class="text-gray-600 mb-2">Komatsu</p>
+                                <p class="text-gray-600 mb-2">Liebherr</p>
+                                <p class="text-gray-600 mb-2">Terex</p>
+                                <p class="text-gray-600 mb-2">Hitachi</p>
+                                <p class="text-gray-600 mb-2">Weichai</p>
+                                <p class="text-gray-600 mb-2">LiuGong</p>
+                                <p class="text-gray-600 mb-2">Stalowa Wola</p>
+                                <p class="text-gray-600 mb-2">Cummins</p>
+                                <p class="text-gray-600 mb-2">Deutz</p>
+                                <p class="text-gray-600 mb-2">Perkins</p>
+                                <p class="text-gray-600 mb-2">Linde</p>
+                                <p class="text-gray-600 mb-2">Atlas</p>
+                                <p class="text-gray-600 mb-2">Bomag</p>
+                                <p class="text-gray-600 mb-2">Howo Sinotruk</p>
+                                <p class="text-gray-600 mb-2">Dingsheng Tiangong</p>
+                                <p class="text-gray-600 mb-2">SDLG</p>
+                                <p class="text-gray-600 mb-2">XCMG</p>
+                                <p class="text-gray-600 mb-2">ZF</p>
+                                <p class="text-gray-600 mb-2">Wirtgen</p>
+                                <p class="text-gray-600 mb-2">HAMM</p>
+                                <p class="text-gray-600 mb-2">Kleemann</p>
+                                <p class="text-gray-600 mb-2">Benninghoven</p>
+                                <p class="text-gray-600 mb-2">Dressta</p>
+                                <p class="text-gray-600 mb-2">Yutong</p>
+                                <p class="text-gray-600 mb-2">МТЗ</p>
+                                <p class="text-gray-600 mb-2">Хундай</p>
+                                <p class="text-gray-600 mb-2">Хитачи</p>
+                                <p class="text-gray-600 mb-2">Вольво</p>
+                                <p class="text-gray-600 mb-2">Коматсу</p>
+                                <p class="text-gray-600 mb-2">Комацу</p>
+                                <p class="text-gray-600 mb-2">Кат</p>
+                                <p class="text-gray-600 mb-2">Катерпиллар</p>
+                                <p class="text-gray-600 mb-2">Джи си би/Джисиби</p>
+                                <p class="text-gray-600 mb-2">Джон Дир</p>
+                                <p class="text-gray-600 mb-2">Терекс</p>
+                                <p class="text-gray-600 mb-2">ДЭУ</p>
+                                <p class="text-gray-600 mb-2">Нью Холланд</p>
+                                <p class="text-gray-600 mb-2">Атлас</p>
+                                <p class="text-gray-600 mb-2">Виртген</p>
+                                <p class="text-gray-600 mb-2">Клеманн</p>
+                                <p class="text-gray-600 mb-2">Либхер</p>
+                                <p class="text-gray-600 mb-2">Хово</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 bg-blue-50 p-4 rounded-lg">
+                            <p class="font-semibold text-blue-800">Важно: Работаем с физическими и юридическими лицами.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-blue-600 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Готовы помочь с ремонтом вашего оборудования</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Оставьте заявку и наш специалист свяжется с вами для консультации</p>
+            <a href="Contact" class="inline-block bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition duration-300">
+                Оставить заявку
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Мехатроника-СПб</h3>
+                    <p class="text-gray-400">Профессиональный ремонт промышленной электроники и блоков спецтехники с гарантией качества.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Услуги</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Ремонт ПЛК</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Ремонт HMI панелей</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Ремонт спецтехники</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Ремонт актуаторов Danfoss</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Контакты</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i> Санкт-Петербург, М. Пл. Восстания, ул. 3-я Советская 9, офис 41
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i> +7 (812) 980-13-85
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> mehatronic-spb@yandex.ru
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Режим работы</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Пн-Пт: 9:00 - 18:00</li>
+                        <li>Сб: 10:00 - 15:00</li>
+                        <li>Вс: выходной</li>
+                    </ul>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-vk text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-telegram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-whatsapp text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Мехатроника-СПб. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+        <script>
+// Общий скрипт для всех страниц
+const pageTitles = {
+    '/': 'Главная',
+    '/index.html': 'Главная',
+    '/service.html': 'Услуги',
+    '/reviews.html': 'Отзывы',
+    '/about.html': 'О компании',
+    '/contact.html': 'Контакты',
+};
+
+// Определяем текущую страницу
+const currentPath = window.location.pathname;
+document.title = `Мехатроника-СПб | ${pageTitles[currentPath] || 'Услуги'}`;
+</script>
+</body>
+</html>

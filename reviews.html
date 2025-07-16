@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мехатроника-СПб | Ремонт промышленной электроники</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+        }
+        .service-card, .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover, .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .contact-badge {
+            transition: all 0.3s ease;
+            border-left: 3px solid #2563eb;
+        }
+        .contact-badge:hover {
+            background-color: #f0f7ff;
+            transform: translateX(5px);
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Top Contact Bar -->
+    <div class="bg-blue-900 text-white py-2 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-4 mb-2 md:mb-0">
+                <a href="tel:+79944245453" class="flex items-center hover:text-blue-200">
+                    <i class="fas fa-mobile-alt mr-2"></i> +7 (994) 424-54-53
+                </a>
+                <a href="tel:+78129801385" class="flex items-center hover:text-blue-200">
+                    <i class="fas fa-phone-alt mr-2"></i> +7 (812) 980-13-85
+                </a>
+            </div>
+            <div class="flex items-center">
+                <a href="mailto:mehatronic-spb@yandex.ru" class="flex items-center hover:text-blue-200">
+                    <i class="fas fa-envelope mr-2"></i> mehatronic-spb@yandex.ru
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href=" /" class="w-16 h-16 mr-3 block"> 
+                    <img src="db/mediafile/logo-1-1.png" alt="Логотип Мехатроника-СПб" class="w-full h-full object-contain">
+                </a>
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-800">Мехатроника-СПб</h1>
+                    <p class="text-sm text-gray-600">Ремонт промышленной электроники</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href=" /" class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 transition">Главная</a>
+                <a href="/services" class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 transition">Услуги</a>
+                <a href="/reviews" class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 transition">Отзывы</a>
+                <a href="/about" class="text-gray-700 hover:text-blue-600 font-medium px-3 py-2 transition">О компании</a>
+                <a href="/contact" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-medium transition">
+                    Контакты
+                </a>
+            </nav>
+            
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-3 px-4 shadow-lg">
+            <div class="space-y-2">
+                <a href="/mecha.local" class="block py-2 px-3 text-gray-700 hover:bg-blue-50 rounded transition">Главная</a>
+                <a href="/services" class="block py-2 px-3 text-gray-700 hover:bg-blue-50 rounded transition">Услуги</a>
+                <a href="/reviews" class="block py-2 px-3 text-gray-700 hover:bg-blue-50 rounded transition">Отзывы</a>
+                <a href="/about" class="block py-2 px-3 text-gray-700 hover:bg-blue-50 rounded transition">О компании</a>
+                <a href="/contact" class="block py-2 px-3 bg-blue-600 text-white rounded font-medium">Контакты</a>
+            </div>
+            <div class="mt-4 pt-4 border-t border-gray-100">
+                <a href="tel:+79944245453" class="flex items-center py-2 px-3 contact-badge">
+                    <i class="fas fa-mobile-alt mr-3 text-blue-600"></i>
+                    <span>+7 (994) 424-54-53</span>
+                </a>
+                <a href="tel:+78129801385" class="flex items-center py-2 px-3 contact-badge">
+                    <i class="fas fa-phone-alt mr-3 text-blue-600"></i>
+                    <span>+7 (812) 980-13-85</span>
+                </a>
+                <a href="mailto:mehatronic-spb@yandex.ru" class="flex items-center py-2 px-3 contact-badge">
+                    <i class="fas fa-envelope mr-3 text-blue-600"></i>
+                    <span>mehatronic-spb@yandex.ru</span>
+                </a>
+            </div>
+        </div>
+    </header>
+                    <style>
+.button-style {
+  /* Базовые стили */
+  display: inline-block;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white !important;
+  text-decoration: none;
+  border-radius: 50px;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Эффект при наведении */
+.button-style:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37, 117, 252, 0.6);
+  background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+}
+
+/* Эффект нажатия */
+.button-style:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(37, 117, 252, 0.4);
+}
+
+/* Анимация "пульса" */
+.button-style::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.button-style:hover::after {
+  animation: pulse 1s ease-out;
+}
+
+@keyframes pulse {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+/* Иконка (добавьте Font Awesome в head) */
+.button-style i {
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.button-style:hover i {
+  transform: translateX(5px);
+}
+</style>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мехатроника-СПб | Ремонт промышленной электроники</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+    </style>
+    <!-- Секция отзывов -->
+    <section class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Отзывы наших клиентов</h1>
+            <p class="text-xl max-w-3xl mx-auto">Более 20 довольных клиентов уже оценили качество нашего сервиса</p>
+        </div>
+    </section>
+
+        <!-- Слайдер отзывов -->
+        <div class="relative">
+            <!-- Кнопки навигации -->
+            <button class="reviews-prev absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 z-10 bg-white rounded-full shadow-md w-12 h-12 flex items-center justify-center text-blue-600 hover:bg-blue-50 transition-all">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="reviews-next absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 z-10 bg-white rounded-full shadow-md w-12 h-12 flex items-center justify-center text-blue-600 hover:bg-blue-50 transition-all">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- Контейнер слайдов -->
+            <div class="reviews-container overflow-hidden">
+                <div class="reviews-slides flex transition-transform duration-500 ease-in-out">
+                    <!-- Слайды будут добавляться через JS -->
+                </div>
+            </div>
+
+            <!-- Точки навигации -->
+            <div class="reviews-dots flex justify-center mt-8 space-x-2">
+                <!-- Точки будут добавляться через JS -->
+            </div>
+
+            <!-- Счетчик отзывов -->
+            <div class="text-center mt-6 text-gray-600">
+                Показаны отзывы: <span class="font-bold text-blue-600 reviews-current">1</span> - 
+                <span class="font-bold text-blue-600 reviews-visible">3</span> из 
+                <span class="font-bold text-blue-600 reviews-total">20</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+// Данные отзывов с путями к аватаркам
+const reviewsData = [
+    {
+        id: 1,
+        name: "Поставка плит",
+        date: "24 февраля",
+        content: "Очень приятное впечатление, починили актуатор Danfoss, сроки, цена, все как договаривались, спасибо за вашу услугу, буду обращаться и всем советую, не пожалеете, ещё раз спасибо.",
+        rating: 5,
+        source: "Авито",
+        avatar: "db/mediafile/logo-1-1.png"
+    },
+    {
+        id: 2,
+        name: "Хазраил",
+        date: "4 декабря 2024",
+        content: "Сгорела материнская плата вышивальной машины MELCO EMT-16 (сам виноват, работал без стабилизатора). Без особой надежды, что возьмутся за ремонт после вмешательства в плату в двух других местах (пытались отремонтировать) позвонил сюда. Согласились, отправил к ним машинку и ребята сотворили чудо - после 5-ти лет простоя вышивальная заработала. Просто гордость берет, что у нас есть такие специалисты. Действительно, у Вас не мастерская, а лаборатория. Цена ремонта - адекватная. Мне она обошлась вместе с дорогой в 30% от стоимости новой платы (2300 км, отправлял из г.Нальчик автобусом). Огромное Вам спасибо.",
+        rating: 5,
+        source: "Авито",
+        avatar: "db/mediafile/logo-1-1.png"
+    },
+    {
+        id: 3,
+        name: "dr.kirramary",
+        date: "8 октября 2024",
+        content: "Ребята просто супер-профессионалы, очень быстро и качественно решили вопрос с косметологическим оборудованием, с которым другие справиться не смогли 😅 Спасибо огромное, счастью нет предела 🙌🏻 Просто спасение, что нашла именно вас 💔",
+        rating: 5,
+        source: "Авито",
+        avatar: "db/mediafile/logo-1-1.png"
+    },
+    {
+        id: 4,
+        name: "Иван",
+        date: "24 августа 2024",
+        content: "Очень приятные люди! Сделали все максимально быстро, всем советую!",
+        rating: 5,
+        source: "Авито",
+        avatar: "db/mediafile/logo-1-1.png"
+    },
+    {
+        id: 5,
+        name: "Денис",
+        date: "15 апреля 2024",
+        content: "Сделка состоялась, очень помогли. Спасибо!",
+        rating: 5,
+        source: "Авито",
+        avatar: "db/mediafile/logo-1-1.png"
+    },
+    {
+        id: 6,
+        name: "Дмитрий",
+        date: "22 января 2024",
+        content: "Все отлично профессионалы!",
+        rating: 5,
+        source: "Авито",
+        avatar: "db/mediafile/logo-1-1.png"
+    },
+    {
+        id: 7,
+        name: "Сергей",
+        date: "28 декабря 2023",
+        content: "Уже было отчаялся найти электромагнитный клапан для манипулятора, но нашел здесь эту замечательную компанию, которая смогла его отремонтировать. Большое спасибо, что вы есть! вы уникальны, ведь больше никто это не делает. Процветания, удачи, и реализации всех ваших идей! С наступающим!!! :))",
+        rating: 5,
+        source: "Авито",
+        avatar: "db/mediafile/logo-1-1.png"
+    },
+    {
+        id: 8,
+        name: "Андрей Анатольевич Воробьёв",
+        date: "12 ноября 2023",
+        content: "Вышивальная машина Brother BE1201 перестала загружаться. Сбой в работе электроники. Абсолютно непонятно что делать. Специалистов, работающих в этой области очень мало, почти нет….Посоветовали обратиться в фирму МЕХАТРОНИКА-СПб. Объяснил свою проблему и ребята взялись. Отправил материнскую плату в Питер. За несколько дней Евгений исправил все неполадки. После ремонта всё в полном порядке, машина работает. Огромное спасибо всем сотрудникам фирмы! Отдельная благодарность Евгению! Отличный мастер!",
+        rating: 5,
+        source: "Авито",
+        avatar: "db/mediafile/logo-1-1.png"
+    },
+    {
+        id: 9,
+        name: "Константин",
+        date: "23 октября 2023",
+        content: "Профи!",
+        rating: 5,
+        source: "Авито",
+        avatar: "db/mediafile/logo-1-1.png"
+    },
+    {
+        id: 10,
+        name: "Владислав",
+        date: "7 августа 2023",
+        content: "Все отлично",
+        rating: 5,
+        source: "Авито",
+        avatar: "db/mediafile/logo-1-1.png"
+    },
+    {
+        id: 11,
+        name: "Алексей",
+        date: "7 ноября 2022",
+        content: "Все работает. Спасибо.",
+        rating: 5,
+        source: "Авито",
+        avatar: "db/mediafile/logo-1-1.png"
+    },
+    {
+        id: 12,
+        name: "ВИКТОР",
+        date: "15 октября 2022",
+        content: "Очень доволен оказанной услугой. Сдал в ремонт модуль трансмиссии JohnDeere, на счет сроков предупредили сразу(1-2дня). Подход к ремонту у ребят серьезный. В срок уложились, и ГЛАВНОЕ - отремонтировали модуль! Гарантию на работы дали - 1 месяц. Просто приятно иметь дело с мастерами своего дела.",
+        rating: 5,
+        source: "Авито",
+        avatar: "db/mediafile/logo-1-1.png"
+    },
+    {
+        id: 13,
+        name: "Андрей",
+        date: "7 сентября 2022",
+        content: "Рекомендую",
+        rating: 5,
+        source: "Авито",
+        avatar: "db/mediafile/logo-1-1.png"
+    },
+    {
+        id: 14,
+        name: "Михаил",
+        date: "20 июля 2022",
+        content: "Профи!",
+        rating: 5,
+        source: "Авито",
+        avatar: "db/mediafile/logo-1-1.png"
+    },
+    {
+        id: 15,
+        name: "Дмитрий Калинин",
+        date: "22 июня 2022",
+        content: "Выражаю огромную благодарность персоналу и компании за возрождённый блок управления КПП трактора. Профессионально провели диагностику и успешно устранили проблемы. Трактор работает теперь без проблем. Спасибо! 🤝",
+        rating: 5,
+        source: "Авито",
+        avatar: "db/mediafile/logo-1-1.png"
+    },
+    {
+        id: 16,
+        name: "Андрей",
+        date: "11 июня 2022",
+        content: "Искренне благодарен! Отличные ребята, золотые руки! Справились с проблемой, от которой другие открещивались! Большой респект!",
+        rating: 5,
+        source: "Авито",
+        avatar: "db/mediafile/logo-1-1.png"
+    },
+    {
+        id: 17,
+        name: "Саша Субботина",
+        date: "2 мая 2022",
+        content: "Все отлично, всегда отвечал на любые вопросы и консультировал, все дошло быстро и аккуратно, довольна сделкой",
+        rating: 5,
+        source: "Авито",
+        avatar: "db/mediafile/logo-1-1.png"
+    },
+    {
+        id: 18,
+        name: "Владимир",
+        date: "23 апреля 2022",
+        content: "К Евгению обратились за профессиональной поддержкой при ремонте блока вышивального станка Brothers BES-941BC. «Ветеран труда» - Main PCB, установленная в станке, отказывалась запускаться и выполнять свои функции в полном объёме и, мне ни как не удавалось привести её в исправное состояние. Некорректно работал мотор, отвечающий за движение по оси X и ещё много сопутствующих ошибок, которые сыпались на дисплей пульта, одна за другой, при попытках запустить станок в работу. Было принято решение - отправить блок к профессионалу, специализирующемуся на ремонте вышивальных станков. Блок целиком + пульт надёжно упаковали и отправили СДЕКом из Москвы в Питер. В итоге, Евгений за ~10 дней исправил положение: * поменял силовые транзисторы в цепи управления двигателем оси икс, на оригинальные; * перебрал всю цепь управления вышеуказанной осью; * заменил пробитые оптроны в цепи инвертора, так же, оригинальными; * произвёл ремонт платы Power PCB; Это лишь малая часть того, что вспомнил во время написания отзыва. Связь поддерживали в WhatsApp, созванивались. После ремонта, продолжаю консультироваться с Евгением через видеосвязь по вопросам «тонких» настроек и пуско-наладочных работ сего японского оборудования.",
+        rating: 5,
+        source: "Авито",
+        avatar: "db/mediafile/logo-1-1.png"
+    },
+    {
+        id: 19,
+        name: "Сергей",
+        date: "21 марта 2022",
+        content: "Отличный мастер! Восстановил из мертвых вышивальную машину! Рекомендую!",
+        rating: 5,
+        source: "Авито",
+        avatar: "db/mediafile/logo-1-1.png"
+    },
+    {
+        id: 20,
+        name: "Александр Голованов",
+        date: "25 сентября 2021",
+        content: "Всё согласно описанию, очень доволен и 100% рекомендую!",
+        rating: 5,
+        source: "Авито",
+        avatar: "db/mediafile/logo-1-1.png"
+    }
+];
+
+// Инициализация слайдера
+document.addEventListener('DOMContentLoaded', function() {
+    const container = document.querySelector('.reviews-slides');
+    const dotsContainer = document.querySelector('.reviews-dots');
+    const prevBtn = document.querySelector('.reviews-prev');
+    const nextBtn = document.querySelector('.reviews-next');
+    const currentEl = document.querySelector('.reviews-current');
+    const visibleEl = document.querySelector('.reviews-visible');
+    const totalEl = document.querySelector('.reviews-total');
+    
+    let currentSlide = 0;
+    let slidesPerView = getSlidesPerView();
+    let totalSlides = Math.ceil(reviewsData.length / slidesPerView);
+    
+    // Установка общего количества отзывов
+    totalEl.textContent = reviewsData.length;
+    
+    // Функция для определения количества слайдов
+    function getSlidesPerView() {
+        if (window.innerWidth < 768) return 1;
+        if (window.innerWidth < 1024) return 2;
+        return 3;
+    }
+    
+    // Создание слайдов
+    function createSlides() {
+        container.innerHTML = '';
+        dotsContainer.innerHTML = '';
+        
+        // Создаем группы слайдов
+        for (let i = 0; i < totalSlides; i++) {
+            const slideGroup = document.createElement('div');
+            slideGroup.className = 'min-w-full flex px-2';
+            
+            // Добавляем отзывы в текущую группу
+            const startIdx = i * slidesPerView;
+            const endIdx = Math.min(startIdx + slidesPerView, reviewsData.length);
+            
+            for (let j = startIdx; j < endIdx; j++) {
+                const review = reviewsData[j];
+                
+                slideGroup.innerHTML += `
+                    <div class="w-full ${slidesPerView > 1 ? 'px-2' : ''}">
+                        <div class="bg-white rounded-lg shadow-md p-6 h-full hover:shadow-lg transition-shadow duration-300">
+                            <div class="flex items-center mb-4 pb-4 border-b border-gray-100">
+                                <img src="${review.avatar}" 
+                                     alt="${review.name}" 
+                                     class="w-12 h-12 rounded-full object-cover mr-4"
+                                     onerror="this.src='images/avatars/default.jpg'">
+                                <div>
+                                    <h4 class="font-bold text-gray-800">${review.name}</h4>
+                                    <p class="text-gray-500 text-sm">${review.date}</p>
+                                    <div class="text-yellow-400 mt-1">
+                                        ${'<i class="fas fa-star"></i>'.repeat(review.rating)}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-gray-600 relative">
+                                <p class="relative z-10">${review.content}</p>
+                            </div>
+                            <div class="mt-4 text-sm text-blue-600 font-medium">
+                                <i class="fas fa-shield-alt mr-2"></i>${review.source}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            container.appendChild(slideGroup);
+            
+            // Создаем точки навигации
+            const dot = document.createElement('button');
+            dot.className = `w-3 h-3 rounded-full ${i === currentSlide ? 'bg-blue-600' : 'bg-gray-300'} transition-colors`;
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+        
+        updateCounter();
+    }
+    
+    // Переход к конкретному слайду
+    function goToSlide(index) {
+        currentSlide = index;
+        container.style.transform = `translateX(-${currentSlide * 100}%)`;
+        updateDots();
+        updateCounter();
+    }
+    
+    // Обновление точек навигации
+    function updateDots() {
+        const dots = dotsContainer.querySelectorAll('button');
+        dots.forEach((dot, index) => {
+            dot.className = `w-3 h-3 rounded-full ${index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'} transition-colors`;
+        });
+    }
+    
+    // Обновление счетчика
+    function updateCounter() {
+        const start = currentSlide * slidesPerView + 1;
+        const end = Math.min(start + slidesPerView - 1, reviewsData.length);
+        
+        currentEl.textContent = start;
+        visibleEl.textContent = end;
+    }
+    
+    // Обработчики событий
+    prevBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        goToSlide(currentSlide);
+    });
+    
+    nextBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        goToSlide(currentSlide);
+    });
+    
+    // Обработчик изменения размера окна
+    window.addEventListener('resize', () => {
+        const newSlidesPerView = getSlidesPerView();
+        if (newSlidesPerView !== slidesPerView) {
+            slidesPerView = newSlidesPerView;
+            totalSlides = Math.ceil(reviewsData.length / slidesPerView);
+            currentSlide = Math.min(currentSlide, totalSlides - 1);
+            createSlides();
+            goToSlide(currentSlide);
+        }
+    });
+    
+    // Инициализация
+    createSlides();
+});
+</script>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Мехатроника-СПб</h3>
+                    <p class="text-gray-400">Профессиональный ремонт промышленной электроники и блоков спецтехники с гарантией качества.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Услуги</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Ремонт ПЛК</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Ремонт HMI панелей</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Ремонт спецтехники</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Ремонт актуаторов Danfoss</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Контакты</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i> Санкт-Петербург, М. Пл. Восстания, ул. 3-я Советская 9, офис 41
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i> +7 (812) 123-45-67
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> info@mechatronic.spb.ru
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Режим работы</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Пн-Пт: 9:00 - 18:00</li>
+                        <li>Сб: 10:00 - 15:00</li>
+                        <li>Вс: выходной</li>
+                    </ul>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-vk text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-telegram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-whatsapp text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Мехатроника-СПб. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+        <script>
+// Общий скрипт для всех страниц
+const pageTitles = {
+    '/': 'Главная',
+    '/index.html': 'Главная',
+    '/service.html': 'Услуги',
+    '/reviews.html': 'Отзывы',
+    '/about.html': 'О компании',
+    '/contact.html': 'Контакты',
+};
+
+// Определяем текущую страницу
+const currentPath = window.location.pathname;
+document.title = `Мехатроника-СПб | ${pageTitles[currentPath] || 'Отзывы'}`;
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+
+# Правила для красивых URL
+RewriteRule ^Main$ Main.html [L]
+RewriteRule ^services$ services.html [L]
+RewriteRule ^reviews$ reviews.html [L]
+RewriteRule ^about$ about.html [L]
+RewriteRule ^contact$ contact.html [L]
+
+# Убираем .html из URL
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ $1.html [L]
